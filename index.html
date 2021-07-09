@@ -5,50 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cricket</title>
     <style>
-        .cont {
-            display: flex;
-            width: 80%;
-            margin: auto;
+        .feild {
+            border: 1px solid red;
         }
 
-        .box {
-            margin: 20px;
-            font-size: 20px;
-            font-weight: 600;
-            display: grid;
-            place-items: center;
-            width: 200px;
-            height: 200px;
-            border: 5px solid khaki;
-            border-radius: 50px;
-            background-color: lawngreen;
-            overflow: hidden;
-            transition: width 1s ease, height 1s ease, font-size 1s, transform 1s;
+        .ball {
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            border-radius: 25px;
+            position: relative;
+            left: 640px;
+            transition: transform 2s ease-out 0.2s;
         }
 
-        .box:hover {
-            cursor: pointer;
-            width: 400px;
-            height: 400px;
-            transform: rotate(360deg);
-            font-size: 40px;
+        .feild:hover .ball {
+            transform: translate(3000px, -500px);
+        }
+
+        .bat {
+            transition: transform 0.2s ease-in;
+        }
+
+        .feild:hover .bat {
+            transform: rotate(-60deg);
+            transform-origin: top right;
         }
     </style>
 </head>
 
 <body>
-    <div class="cont">
-        <div class="box">
-            <p>Transition</p>
-        </div>
-        <div class="box">
-            <p>Transition</p>
-        </div>
-        <div class="box">
-            <p>Transition</p>
-        </div>
+    <div class="feild">
+        <img class="bat" src="bat.png" alt="">
+        <div class="ball"></div>
     </div>
 </body>
 
